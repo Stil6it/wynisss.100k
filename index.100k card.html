@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Поздравляю с 100K!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Rubik&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: linear-gradient(to right top, #ffd6e8, #ffe5f1, #ffeaff); /* Фон */
+      font-family: 'Rubik', sans-serif;
+      text-align: center;
+      overflow: scroll;
+      height: 100vh;
+    }
+    
+    
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3.5em;
+      color: #ff1493;
+      margin-top: 60px;
+      text-shadow: 2px 2px #fff0f5;
+    }
+
+    p {
+      font-size: 1.4em;
+      color: #333;
+      max-width: 600px;
+      margin: 30px auto;
+      line-height: 1.6;
+    }
+
+    /* СТИЛИ ДЛЯ ФОТО И ВИДЕО */
+    .image-section img {
+      width: 80vw;
+      max-width: 900px;
+      border-radius: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      margin-top: 40px;
+      transition: transform 0.3s ease;
+    }
+    .image-section img:hover{
+        transform: scale(1.02);
+    }
+
+    .gif-section img {
+      width: 60vw;
+      max-width: 600px;
+      margin-top: 35px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .video-section video {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      margin-top: 25px;
+    }
+
+    /* СЕРДЕЧКИ */
+    .heart {
+      position: absolute;
+      color: #ff69b4;
+      animation: float 6s infinite ease-in-out;
+      font-size: 2em;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.9;
+      }
+      50% {
+        transform: translateY(-150px) scale(1.2);
+        opacity: 0.6;
+      }
+      100% {
+        transform: translateY(-300px) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>100 000 подписчиков!</h1>
+  <p>
+    Настя ты реально сделал это! <br>
+    Красиво, вдохновляюще, по-настоящему. <br>
+    Продолжай сиять и творить! (как Мага ), а так желаю тебе большого успеха что бы обогнала всех в мире по подписчикам
+  </p>
+
+  <!-- ВСТАВКА ФОТО -->
+  <div class="image-section">
+    <img src="Настя бела.png" alt="Поздравительное фото">
+    <!-- Заменить ссылку на свою — можно залить картинку на imgur или GitHub -->
+  </div>
+
+  <!-- ВСТАВКА ГИФКИ -->
+  <div class="gif-section">
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmoyYWt1eXNiNmhvbDE4eTgwcDZpbHFnMmZncWZwOHIxM2l6MWlkOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LTNTIw21Qy0ko8SS4Y/giphy.gif" alt="Поздравительная гифка">
+  </div>
+
+ 
+  
+
+  <!-- СЕРДЦА -->
+  <script>
+    const hearts = ["💖","💗","💓","💘","💝","💕"];
+    for (let i = 0; i < 40; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.top = Math.random() * 100 + "vh";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      heart.style.fontSize = (Math.random() * 2 + 1) + "em";
+      document.body.appendChild(heart);
+    }
+  </script>
+
+ <b> <div class="footer">СДЕЛАНО С ЛЮБОВЬЮ ОТ АЛКАША</div></b>
+
+</body>
+</html>
